@@ -319,7 +319,6 @@ body {
 .contact-form {
   flex: 1;
   max-width: 500px;
-
 }
 
 .contact-form input, .contact-form textarea {
@@ -348,6 +347,43 @@ body {
 .contact-form button:hover {
   background: white;
 }
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .btn-download {
+    margin-top: 30px;
+    padding: 12px 25px;
+  }
+}
+
 
 
 /* Section Container */
