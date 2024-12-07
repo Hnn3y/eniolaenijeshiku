@@ -1,4 +1,3 @@
-// Smooth Scrolling for Navigation Links
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -10,9 +9,26 @@ document.querySelectorAll('nav a').forEach(link => {
     });
   });
   
-  // Contact Form
-  document.getElementById('contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    alert('Thank you for contacting me! I will respond shortly.');
+  
+  document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+    const name = document.querySelector('input[placeholder="Your Name"]').value;
+    const email = document.querySelector('input[placeholder="Your Email"]').value;
+    const message = document.querySelector('textarea[placeholder="Your Message"]').value;
+
+    if (!name || !email || !message) {
+      alert('Please fill out all fields.');
+      return;
+    }
+
+    alert(`Message sent successfully!`);
   });
+
+  const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+  formInputs.forEach(input => {
+    input.addEventListener('focus', (e) => {
+      e.preventDefault(); 
+    });
+  });
+
   
